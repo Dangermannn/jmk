@@ -13,9 +13,9 @@ console.log("current path:", currentPath)
   return (
     <nav className="bg-blue-700 shadow-md">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between relative">
-        <div className="text-xl font-bold text-white-800">JMK</div>
+        <div className="text-xl font-bold text-white">JMK</div>
         <button
-          className="md:hidden text-white-700 focus:outline-none ml-auto"
+          className="md:hidden text-white focus:outline-none ml-auto"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
