@@ -2,7 +2,7 @@
   "name": "jmk",
   "private": true,
   "type": "module",
-  "homepage": "https://dangermannn.github.io/jmk",
+  "homepage": "https://dangermannn.github.io/jmk/",
   "scripts": {
     "build": "react-router build",
     "dev": "react-router dev",
