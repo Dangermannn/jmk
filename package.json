@@ -2,13 +2,13 @@
   "name": "jmk",
   "private": true,
   "type": "module",
-  "homepage": "https://dangermannn.github.io/jmk/",
+  "homepage": ".",
   "scripts": {
     "build": "react-router build",
     "dev": "react-router dev",
     "start": "react-router-serve ./build/server/index.js",
     "typecheck": "react-router typegen && tsc",
-    "build:pages": "react-router build --out-dir build --public-path /jmk/",
+    "build:pages": "react-router build --public-path /jmk/",
     "predeploy": "npm run build:pages",
     "deploy": "gh-pages -d build"
   },
