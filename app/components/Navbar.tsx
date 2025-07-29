@@ -2,18 +2,20 @@ import i18next from "i18next";
 import { useState, useTransition } from "react";
 import { useTranslation } from "react-i18next";
 
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar: React.FC = () => {
   const { t } = useTranslation();
+  const location = useLocation();
+  const currentPath = location.pathname;
   const [open, setOpen] = useState(false);
-
+console.log("current path:", currentPath)
   return (
-    <nav className="bg-gray-800 shadow-md">
+    <nav className="bg-blue-700 shadow-md">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between relative">
         <div className="text-xl font-bold text-white-800">JMK</div>
         <button
-          className="md:hidden text-gray-700 focus:outline-none ml-auto"
+          className="md:hidden text-white-700 focus:outline-none ml-auto"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
@@ -56,7 +58,9 @@ const Navbar: React.FC = () => {
           <li>
             <Link
               to="/"
-              className="block px-4 py-2 text-white-700 hover:text-white-600 transition"
+              className={`block px-4 py-2 text-lg transition ${
+                currentPath === "/" ? "text-white font-bold" : "text-white/70"
+              } hover:text-white`}
               onClick={() => setOpen(false)}
             >
               {t('MainPage')}
@@ -64,17 +68,10 @@ const Navbar: React.FC = () => {
           </li>
           <li>
             <Link
-              to="/offer"
-              className="block px-4 py-2 text-white-700 hover:text-white-600 transition"
-              onClick={() => setOpen(false)}
-            >
-              {t('Offer')}
-            </Link>
-          </li>
-          <li>
-            <Link
               to="/prices"
-              className="block px-4 py-2 text-white-700 hover:text-white-600 transition"
+              className={`block px-4 py-2 text-lg transition ${
+                currentPath === "/prices" ? "text-white font-bold" : "text-white/70"
+              } hover:text-white`}
               onClick={() => setOpen(false)}
             >
               {t('PriceList')}
@@ -83,7 +80,9 @@ const Navbar: React.FC = () => {
           <li>
             <Link
               to="/contact"
-              className="block px-4 py-2 text-white-700 hover:text-white-600 transition"
+              className={`block px-4 py-2 text-lg transition ${
+                currentPath === "/contact" ? "text-white font-bold" : "text-white/70"
+              } hover:text-white`}
               onClick={() => setOpen(false)}
             >
               {t('Contact')}

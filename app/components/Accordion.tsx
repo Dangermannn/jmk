@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 
-export default function Accordion({ className, title, children }: { className?: string; title: string; children: React.ReactNode }) {
+export default function  Accordion({ className, title, children }: { className?: string; title: string; children: React.ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
   const contentRef = useRef<HTMLDivElement>(null);
 
@@ -8,9 +8,9 @@ export default function Accordion({ className, title, children }: { className?: 
     <div className={`border border-gray-200 rounded-md overflow-hidden mb-4 ${className}`}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex justify-between items-center bg-blue-50 text-blue-800 font-medium px-4 py-3 transition-colors"
+        className="w-full flex justify-between items-center bg-blue-50 text-blue-800 font-medium px-4 py-3 cursor-pointer transition-colors"
       >
-        <span>{title}</span>
+        <span className="text-lg">{title}</span>
         <svg
           className={`w-5 h-5 text-blue-600 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
           fill="none"

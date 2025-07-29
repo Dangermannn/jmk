@@ -30,9 +30,12 @@
   "VatRegistered": "Z ewidencją VAT",
   "RevenueAndExpenseLedger": "Księga przychodów i rozchodów wg ilości dokumentów",
   "RevenueWithoutCosts": "Ryczałt ewidencjonowany wg ilości dokumentów",
+  "RevenueAndExpenseTitle": "Księga przychodów i rozchodów",
+  "RevenueWithoutCostsTitle": "Ryczałt ewidencjonowany",
+  "TradeBooksTitle": "Księgi handlowe",
   "TradeBooks": "Księgi handlowe wg ilości dokumentów",
-  "PricesHeader": "Poniżej zamieszczono cennik usług księgowych.",
-  "PricesMessage": "Podane ceny są cenami BRUTTO.",  
+  "PricesHeader": "Poniżej zamieszczono cennik usług księgowych",
+  "PricesMessage": "Podane ceny są cenami",  
   "DocumentsCount": "Liczba dokumentów",
   "EveryRegisterAboveLimit": "Każdy zapis powyżej ustalonego limitu",
   "AnnualSettlement": "Rozliczenie roczne",
@@ -80,6 +83,8 @@
   "ContactUsMessage": "Jeśli masz pytania dotyczące cennika lub potrzebujesz dodatkowych informacji, skontaktuj się z nami.",
   "ContactUsEmail": "Napisz do nas na adres: {{email}}",
   "CompanyTitle": "Biuro Rachunkowe JMK Monika Kruszewska",
+  "CompanyFooterTitle": "Biuro Rachunkowe JMK Monika Kruszewska. Wszystkie prawa zastrzeżone.",
+  "CompanyHistory": "Biuro Rachunkowe JMK Monika Kruszewska działa od 2013 roku i posiada certyfikat księgowy nr 37370/2010 wydany przez Ministerstwo Finansów. Biuro jest ubezpieczone od odpowiedzialności cywilnej.",
   "CompanyAddress": "05-090 Raszyn\nul. Żeromskiego 1A",
   "NipValue": "522 214 02 82"
 }

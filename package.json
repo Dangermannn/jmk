@@ -2,6 +2,7 @@
   "name": "jmk",
   "private": true,
   "type": "module",
+  "homepage": ".",
   "scripts": {
     "build": "react-router build",
     "dev": "react-router dev",
