@@ -8,7 +8,7 @@ export default function  Accordion({ className, title, children }: { className?:
     <div className={`border border-gray-200 rounded-md overflow-hidden mb-4 ${className}`}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex justify-between items-center bg-blue-50 text-blue-800 font-medium px-4 py-3 cursor-pointer transition-colors"
+        className="w-full flex justify-between items-center bg-blue-100 text-blue-800 font-medium px-4 py-3 cursor-pointer transition-colors"
       >
         <span className="text-lg">{title}</span>
         <svg
