@@ -1,0 +1,1 @@
+import{p as r}from"./chunk-C37GKA54-BpvFEJmx.js";const n=({children:e,type:t="h1",className:s})=>{const a=t,o=t==="h1"?"text-5xl font-bold text-center mb-2 text-gray-900":"text-lg font-bold mb-2 text-gray-700";return r.jsx(a,{className:`${o} ${s}`,children:e})};export{n as H};
