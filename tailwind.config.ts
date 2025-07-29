@@ -4,6 +4,7 @@ const config: Config = {
   content: [
     './index.html',
     './app/**/*.{js,ts,jsx,tsx}',
+    './app/assets/**/*.{jpg,jpeg,png,gif,svg}',
   ],
   theme: {
     extend: {
