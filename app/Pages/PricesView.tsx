@@ -108,15 +108,13 @@ const PricesView = () => {
         <Table>
           <TableHeader>
             <TableColumnHeader>{t("Service")}</TableColumnHeader>
-            <TableColumnHeader>{t("NoVatRegistered")}</TableColumnHeader>
-            <TableColumnHeader>{t("VatRegistered")}</TableColumnHeader>
+            <TableColumnHeader>{t("ServicePrice")}</TableColumnHeader>
           </TableHeader>
           <TableBody>
             { TRADE_BOOKS.map((item) => (
               <TableRow key={item.title}>
                 <TableColumnHeader>{item.title}</TableColumnHeader>
-                <TableColumn>{item.noVatPrice}</TableColumn>
-                <TableColumn>{item.vatPrice}</TableColumn>
+                <TableColumn>{item.price}</TableColumn>
               </TableRow>
             ))}
           </TableBody>
@@ -174,6 +172,10 @@ const PricesView = () => {
         </Table>
       </Accordion>
       <Accordion className="fade-in-up animate-duration-700 animate-delay-900" title={t("Discounts")}>
+                <div className="container mx-auto pt-4">
+          <div className="text-xl font-bold p-4">
+            {t("DiscountsSumUp")}
+          </div>
         <Table>
           <TableHeader>
             <TableColumnHeader>{t("Service")}</TableColumnHeader>
@@ -188,6 +190,8 @@ const PricesView = () => {
             ))}
           </TableBody>
         </Table>
+        </div>
+        
       </Accordion>
     </>
   );

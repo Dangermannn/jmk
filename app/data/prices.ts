@@ -39,11 +39,11 @@ export const REVENUE_WITHOUT_COSTS_ADDITIONAL_SERVICES: Array<PriceText> = [
     { title: i18next.t("AnnualSettlement"), price: i18next.t("PricePerYear", { price: "300,00" }) },
 ];
 
-export const TRADE_BOOKS: Array<VatPrice> = [
-    { title: i18next.t("RangeDocuments", { range: "0 - 10"}), noVatPrice: i18next.t("PricePerMonth", { price: "1100,00" }), vatPrice: i18next.t("PricePerMonth", { price: "1100,00" }) },
-    { title: i18next.t("RangeDocuments", { range: "11 - 20"}), noVatPrice: i18next.t("PricePerMonth", { price: "1600,00" }), vatPrice: i18next.t("PricePerMonth", { price: "1600,00" }) },
-    { title: i18next.t("RangeDocuments", { range: "21 - 30"}), noVatPrice: i18next.t("PricePerMonth", { price: "2000,00" }), vatPrice: i18next.t("PricePerMonth", { price: "2100,00" }) },
-    { title: i18next.t("RangeDocuments", { range: "31 - 40"}), noVatPrice: i18next.t("PricePerMonth", { price: "2600,00" }), vatPrice: i18next.t("PricePerMonth", { price: "2600,00" }) }
+export const TRADE_BOOKS: Array<PriceText> = [
+    { title: i18next.t("RangeDocuments", { range: "0 - 10"}), price: i18next.t("PricePerMonth", { price: "1100,00" }) },
+    { title: i18next.t("RangeDocuments", { range: "11 - 20"}), price: i18next.t("PricePerMonth", { price: "1600,00" }) },
+    { title: i18next.t("RangeDocuments", { range: "21 - 30"}), price: i18next.t("PricePerMonth", { price: "2100,00" }) },
+    { title: i18next.t("RangeDocuments", { range: "31 - 40"}), price: i18next.t("PricePerMonth", { price: "2600,00" }) }
 ];
 
 export const TRADE_BOOKS_ADDITIONAL_SERVICES: Array<PriceText> = [

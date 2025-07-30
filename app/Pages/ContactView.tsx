@@ -6,6 +6,7 @@ import LocationIcon from "~/assets/svgs/location-icon.svg";
 import PhoneCallIcon from "~/assets/svgs/phone-call.svg";
 import { Header } from "~/components/Header";
 import { Text } from "~/components/Table/Text";
+import B2BCalculator from "~/components/B2bCalculator";
 
 export const ContactView: React.FC = () => {
   const { t } = useTranslation();
