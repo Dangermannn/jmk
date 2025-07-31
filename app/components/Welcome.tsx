@@ -1,6 +1,6 @@
 import type { FC } from "react";
 import { useTranslation } from "react-i18next";
-import Logo from "~/assets/images/price-bg-img.jpg"; // Adjust path if needed
+import Logo from "~/assets/images/price-bg-img-reduced.jpg"; // Adjust path if needed
 
 const Welcome: FC = () => {
     const { t } = useTranslation();
@@ -8,7 +8,7 @@ const Welcome: FC = () => {
   return (
     <div className="fade-in-up animate-duration-700 animate-delay-10 relative w-full h-[60vh] rounded-2xl overflow-hidden mx-auto mb-10 my-12 shadow-xl">
       {/* Background */}
-      <div className="absolute inset-0 bg-[url('./assets/images/home-page-banner.jpg')] bg-cover bg-center" />
+      <div className="absolute inset-0 bg-[url('./assets/images/home-page-banner-reduced.jpg')] bg-cover bg-center" />
       <div className="absolute inset-0 bg-gray-700/30 backdrop-blur-sm" />
 
       {/* Content */}

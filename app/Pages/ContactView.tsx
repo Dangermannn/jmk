@@ -8,7 +8,7 @@ import { Header } from "~/components/Header";
 import { Text } from "~/components/Text";
 import B2BCalculator from "~/components/B2bCalculator";
 
-export const ContactView: React.FC = () => {
+const ContactView: React.FC = () => {
   const { t } = useTranslation();
 
   return (
@@ -61,3 +61,5 @@ export const ContactView: React.FC = () => {
     </div>
   );
 };
+
+export default ContactView;

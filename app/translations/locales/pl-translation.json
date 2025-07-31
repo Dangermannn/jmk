@@ -76,6 +76,7 @@
   "AdditionalAccountingServices": "Dodatkowe usługi księgowe niewymienione w cenniku",
   "Discounts": "Rabaty",
   "Discount": "Rabat",
+  "DiscountSumUpTitle": "Rabaty (rabaty się sumują)",
   "ClientsCommandDiscount": "Polecenie klienta",
   "DiscountsSumUp": " Uwaga: Rabaty sumują się :)",
   "ClientsCommandDiscountValue": "{{percent}}% usługi księgowej przez 12 miesięcy",

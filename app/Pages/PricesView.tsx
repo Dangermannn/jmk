@@ -14,10 +14,9 @@ const PricesView = () => {
   const { t } = useTranslation();
   return (
     <>
-
     <div className="fade-in-up animate-duration-700 animate-delay-10 relative w-full h-[50vh] rounded-2xl overflow-hidden mx-auto mb-10 my-12 shadow-xl">
   {/* Background image */}
-  <div className="absolute inset-0 bg-[url('./assets/images/price-bg-img.jpg')] bg-cover bg-center" />
+  <div className="absolute inset-0 bg-[url('./assets/images/price-bg-img-reduced.jpg')] bg-cover bg-center" />
 
   {/* Semi-transparent black overlay */}
   <div className="absolute inset-0 bg-black/50" />
@@ -185,11 +184,7 @@ const PricesView = () => {
           </TableBody>
         </Table>
       </Accordion>
-      <Accordion className="fade-in-up animate-duration-700 animate-delay-1000" title={t("Discounts")}>
-            <div className="container mx-auto pt-4">
-          <div className="text-xl font-bold p-4">
-            {t("DiscountsSumUp")}
-          </div>
+      <Accordion className="fade-in-up animate-duration-700 animate-delay-1000" title={t("DiscountSumUpTitle")}>
         <Table numColumns={2}>
           <TableHeader>
             <TableColumnHeader>{t("Service")}</TableColumnHeader>
@@ -204,7 +199,6 @@ const PricesView = () => {
             ))}
           </TableBody>
         </Table>
-        </div>
       </Accordion>
     </>
   );

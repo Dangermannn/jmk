@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import Card from "~/components/Card";
 import { Header } from "~/components/Header";
-import Image from "~/assets/images/price-bg-img.jpg";
+import Image from "~/assets/images/price-bg-img-reduced.jpg";
 import Welcome from "~/components/Welcome";
 import KpirImg from "~/assets/images/kpir.png"; 
 import WomanContractImg from "~/assets/images/womancontract.png"

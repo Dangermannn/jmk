@@ -1,10 +1,14 @@
+import { lazy, Suspense } from "react";
 import { PageContainer } from "~/components/PageContainer";
-import { ContactView } from "~/Pages/ContactView";
 
+
+const ContactView = lazy(() => import('../Pages/ContactView'));
 const Contact = () => {
   return (
     <PageContainer>
-      <ContactView />
+      <Suspense fallback={<div>loading...</div>}>
+        <ContactView />
+      </Suspense>
     </PageContainer>
   );
 }

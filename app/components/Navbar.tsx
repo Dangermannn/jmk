@@ -9,7 +9,7 @@ const Navbar: React.FC = () => {
   const location = useLocation();
   const currentPath = location.pathname;
   const [open, setOpen] = useState(false);
-console.log("current path:", currentPath)
+
   return (
     <nav className="bg-blue-700 shadow-md">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between relative">

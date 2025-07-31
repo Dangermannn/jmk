@@ -36,17 +36,6 @@ body {
 */
 
 
-.test2 {
-  
-  background: url('./assets/images/price-bg-img.jpg') no-repeat center center;
-  background-size: cover;
-}
-
-.test {
-background: #cfd2d4;
-background: linear-gradient(0deg,rgba(207, 210, 212, 1) 52%, rgba(47, 169, 222, 1) 100%);
-}
-
 /* Your custom animation */
 @layer utilities {
   /* Base fade-in-up animation using CSS variables */
