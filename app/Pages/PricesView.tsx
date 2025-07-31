@@ -1,16 +1,14 @@
 import { useTranslation } from "react-i18next";
 import Accordion from "~/components/Accordion";
-import { Footer } from "~/components/Footer";
 import { Header } from "~/components/Header";
-import Navbar from "~/components/Navbar";
-import { PageContainer } from "~/components/PageContainer";
 import { Table } from "~/components/Table/Table";
 import { TableBody } from "~/components/Table/TableBody";
 import { TableColumn } from "~/components/Table/TableColumn";
 import { TableColumnHeader } from "~/components/Table/TableColumnHeader";
 import { TableHeader } from "~/components/Table/TableHeader";
 import { TableRow } from "~/components/Table/TableRow";
-import { ADDITIONAL_FEES, DISCOUNTS, PAYROLL_SERVICE, REVENUE_AND_EXPENSE_LEDGER, REVENUE_AND_EXPENSE_LEDGER_ADDITIONAL_SERVICES, REVENUE_WITHOUT_COSTS, REVENUE_WITHOUT_COSTS_ADDITIONAL_SERVICES, TRADE_BOOKS, TRADE_BOOKS_ADDITIONAL_SERVICES } from "~/data/prices";
+
+import { ADDITIONAL_FEES, DISCOUNTS, DOCUMENT_STORAGE, PAYROLL_SERVICE, REVENUE_AND_EXPENSE_LEDGER, REVENUE_AND_EXPENSE_LEDGER_ADDITIONAL_SERVICES, REVENUE_WITHOUT_COSTS, REVENUE_WITHOUT_COSTS_ADDITIONAL_SERVICES, TRADE_BOOKS, TRADE_BOOKS_ADDITIONAL_SERVICES } from "~/data/PricesDetails";
 
 const PricesView = () => {
   const { t } = useTranslation();
@@ -33,18 +31,18 @@ const PricesView = () => {
     </div>
   </div>
       <Accordion className="fade-in-up animate-duration-700 animate-delay-500" title={t("RevenueAndExpenseLedger")}>
-        <Table>
+        <Table numColumns={3}>
           <TableHeader>
             <TableColumnHeader>{t("Service")}</TableColumnHeader>
-            <TableColumnHeader>{t("NoVatRegistered")}</TableColumnHeader>
-            <TableColumnHeader>{t("VatRegistered")}</TableColumnHeader>
+            <TableColumnHeader align="right">{t("NoVatRegistered")}</TableColumnHeader>
+            <TableColumnHeader align="right">{t("VatRegistered")}</TableColumnHeader>
           </TableHeader>
           <TableBody>
             { REVENUE_AND_EXPENSE_LEDGER.map((item) => (
               <TableRow key={item.title}>
                 <TableColumnHeader>{item.title}</TableColumnHeader>
-                <TableColumn>{item.noVatPrice}</TableColumn>
-                <TableColumn>{item.vatPrice}</TableColumn>
+                <TableColumn align="right">{item.noVatPrice}</TableColumn>
+                <TableColumn align="right">{item.vatPrice}</TableColumn>
               </TableRow>
             ))}
           </TableBody>
@@ -53,16 +51,16 @@ const PricesView = () => {
           <div className="text-xl font-bold p-4">
             {t("Additionally")}
           </div>
-            <Table>
+            <Table numColumns={2}>
             <TableHeader>
               <TableColumnHeader>{t("Service")}</TableColumnHeader>
-              <TableColumnHeader>{t("ServicePrice")}</TableColumnHeader>
+              <TableColumnHeader align="right">{t("ServicePrice")}</TableColumnHeader>
             </TableHeader>
             <TableBody>
               { REVENUE_AND_EXPENSE_LEDGER_ADDITIONAL_SERVICES.map((item) => (
                 <TableRow key={item.title}>
                   <TableColumnHeader>{item.title}</TableColumnHeader>
-                  <TableColumn>{item.price}</TableColumn>
+                  <TableColumn align="right">{item.price}</TableColumn>
                 </TableRow>
               ))}
             </TableBody>
@@ -70,16 +68,16 @@ const PricesView = () => {
         </div>
       </Accordion>
       <Accordion className="fade-in-up animate-duration-700 animate-delay-500" title={t("RevenueWithoutCosts")}>
-        <Table>
+        <Table numColumns={2}>
           <TableHeader>
             <TableColumnHeader>{t("Service")}</TableColumnHeader>
-            <TableColumnHeader>{t("ServicePrice")}</TableColumnHeader>
+            <TableColumnHeader align="right">{t("ServicePrice")}</TableColumnHeader>
           </TableHeader>
           <TableBody>
             { REVENUE_WITHOUT_COSTS.map((item) => (
               <TableRow key={item.title}>
                 <TableColumnHeader>{item.title}</TableColumnHeader>
-                <TableColumn>{item.price}</TableColumn>
+                <TableColumn align="right">{item.price}</TableColumn>
               </TableRow>
             ))}
           </TableBody>
@@ -88,16 +86,16 @@ const PricesView = () => {
           <div className="text-xl font-bold p-4">
             {t("Additionally")}
           </div>
-            <Table>
+            <Table numColumns={2}>
             <TableHeader>
               <TableColumnHeader>{t("Service")}</TableColumnHeader>
-              <TableColumnHeader>{t("ServicePrice")}</TableColumnHeader>
+              <TableColumnHeader align="right">{t("ServicePrice")}</TableColumnHeader>
             </TableHeader>
             <TableBody>
               { REVENUE_WITHOUT_COSTS_ADDITIONAL_SERVICES.map((item) => (
                 <TableRow key={item.title}>
                   <TableColumnHeader>{item.title}</TableColumnHeader>
-                  <TableColumn>{item.price}</TableColumn>
+                  <TableColumn align="right">{item.price}</TableColumn>
                 </TableRow>
               ))}
             </TableBody>
@@ -105,16 +103,16 @@ const PricesView = () => {
         </div>
       </Accordion>
       <Accordion className="fade-in-up animate-duration-700 animate-delay-600" title={t("TradeBooks")}>
-        <Table>
+        <Table numColumns={2}>
           <TableHeader>
             <TableColumnHeader>{t("Service")}</TableColumnHeader>
-            <TableColumnHeader>{t("ServicePrice")}</TableColumnHeader>
+            <TableColumnHeader align="right">{t("ServicePrice")}</TableColumnHeader>
           </TableHeader>
           <TableBody>
             { TRADE_BOOKS.map((item) => (
               <TableRow key={item.title}>
                 <TableColumnHeader>{item.title}</TableColumnHeader>
-                <TableColumn>{item.price}</TableColumn>
+                <TableColumn align="right">{item.price}</TableColumn>
               </TableRow>
             ))}
           </TableBody>
@@ -123,16 +121,16 @@ const PricesView = () => {
           <div className="text-xl font-bold p-4">
             {t("Additionally")}
           </div>
-            <Table>
+            <Table numColumns={2}>
             <TableHeader>
               <TableColumnHeader>{t("Service")}</TableColumnHeader>
-              <TableColumnHeader>{t("ServicePrice")}</TableColumnHeader>
+              <TableColumnHeader align="right">{t("ServicePrice")}</TableColumnHeader>
             </TableHeader>
             <TableBody>
               { TRADE_BOOKS_ADDITIONAL_SERVICES.map((item) => (
                 <TableRow key={item.title}>
                   <TableColumnHeader>{item.title}</TableColumnHeader>
-                  <TableColumn>{item.price}</TableColumn>
+                  <TableColumn align="right">{item.price}</TableColumn>
                 </TableRow>
               ))}
             </TableBody>
@@ -140,58 +138,73 @@ const PricesView = () => {
         </div>
       </Accordion>
       <Accordion className="fade-in-up animate-duration-700 animate-delay-700" title={t("PayrollService")}>
-        <Table>
+        <Table numColumns={2}>
           <TableHeader>
             <TableColumnHeader>{t("Service")}</TableColumnHeader>
-            <TableColumnHeader>{t("ServicePrice")}</TableColumnHeader>
+            <TableColumnHeader align="right">{t("ServicePrice")}</TableColumnHeader>
           </TableHeader>
           <TableBody>
             { PAYROLL_SERVICE.map((item) => (
               <TableRow key={item.title}>
                 <TableColumnHeader>{item.title}</TableColumnHeader>
-                <TableColumn>{item.price}</TableColumn>
+                <TableColumn align="right">{item.price}</TableColumn>
               </TableRow>
             ))}
           </TableBody>
         </Table>
       </Accordion>
       <Accordion className="fade-in-up animate-duration-700 animate-delay-800" title={t("AdditionalFees")}>
-        <Table>
+        <Table numColumns={2}>
           <TableHeader>
             <TableColumnHeader>{t("Service")}</TableColumnHeader>
-            <TableColumnHeader>{t("ServicePrice")}</TableColumnHeader>
+            <TableColumnHeader align="right">{t("ServicePrice")}</TableColumnHeader>
           </TableHeader>
           <TableBody>
             { ADDITIONAL_FEES.map((item) => (
               <TableRow key={item.title}>
                 <TableColumnHeader>{item.title}</TableColumnHeader>
-                <TableColumn>{item.price}</TableColumn>
+                <TableColumn align="right">{item.price}</TableColumn>
               </TableRow>
             ))}
           </TableBody>
         </Table>
       </Accordion>
-      <Accordion className="fade-in-up animate-duration-700 animate-delay-900" title={t("Discounts")}>
-                <div className="container mx-auto pt-4">
+      <Accordion className="fade-in-up animate-duration-700 animate-delay-900" title={t("DocumentStorage")}>
+        <Table numColumns={2}>
+          <TableHeader>
+            <TableColumnHeader>{t("Service")}</TableColumnHeader>
+            <TableColumnHeader align="right">{t("ServicePrice")}</TableColumnHeader>
+          </TableHeader>
+          <TableBody>
+            { DOCUMENT_STORAGE.map((item) => (
+              <TableRow key={item.title}>
+                <TableColumnHeader>{item.title}</TableColumnHeader>
+                <TableColumn align="right">{item.price}</TableColumn>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </Accordion>
+      <Accordion className="fade-in-up animate-duration-700 animate-delay-1000" title={t("Discounts")}>
+            <div className="container mx-auto pt-4">
           <div className="text-xl font-bold p-4">
             {t("DiscountsSumUp")}
           </div>
-        <Table>
+        <Table numColumns={2}>
           <TableHeader>
             <TableColumnHeader>{t("Service")}</TableColumnHeader>
-            <TableColumn>{t("ServicePrice")}</TableColumn>
+            <TableColumnHeader align="right">{t("Discount")}</TableColumnHeader>
           </TableHeader>
           <TableBody>
             { DISCOUNTS.map((item) => (
               <TableRow key={item.title}>
                 <TableColumnHeader>{item.title}</TableColumnHeader>
-                <TableColumn>{item.price}</TableColumn>
+                <TableColumn align="right">{item.price}</TableColumn>
               </TableRow>
             ))}
           </TableBody>
         </Table>
         </div>
-        
       </Accordion>
     </>
   );

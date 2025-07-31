@@ -15,7 +15,7 @@ const Welcome: FC = () => {
       <div className="flex items-center justify-center relative z-10 h-full flex-col text-center px-4">
         <img
           src={Logo}
-          alt="Logo"
+          alt="Biuro rachunkowe"
           className="w-60 h-60 object-contain mb-3"
         />
 

@@ -6,7 +6,7 @@ import Welcome from "~/components/Welcome";
 import KpirImg from "~/assets/images/kpir.png"; 
 import WomanContractImg from "~/assets/images/womancontract.png"
 import BooksImg from "~/assets/images/books.png";
-
+import { Text } from "~/components/Text";
 const HomeView = () => {
   const { t } = useTranslation();
 
@@ -42,11 +42,9 @@ const HomeView = () => {
     <section className="w-full mb-8 bg-white shadow-inner py-12 px-6 fade-in-up animate-duration-700 animate-delay-500">
     <div className="max-w-7xl mx-auto">
         <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-4">
-        {t("WhyShouldYouTrustUs")}
+            {t("WhyShouldYouTrustUs")}
         </h2>
-        <p className="mb-4 text-gray-800 text-justify">
-            {t("CompanyHistory")}
-        </p>
+        <Text className="mb-4 text-justify">{t("CompanyHistory")}</Text>
 
         <h3 className="text-xl font-semibold mb-2 text-blue-800">Zakres usług księgowych obejmuje:</h3>
         <ul className="list-disc list-inside text-gray-700 space-y-1">

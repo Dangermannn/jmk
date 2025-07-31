@@ -84,7 +84,12 @@ export const ADDITIONAL_FEES: Array<PriceText> = [
     { title: i18next.t("OfficeServices"), price: i18next.t("PricePerNumberOfDocuments", { price: "10,00", count: 10 }) },
     { title: i18next.t("PrepareDocumentsForTaxChange"), price: i18next.t("PriceValue", { price: "100,00" }) },
     { title: i18next.t("AdditionalAccountingServices"), price: i18next.t("FromPricePln", { price: "50,00" }) }    
-]
+];
+
+export const DOCUMENT_STORAGE: Array<PriceText> = [
+    { title: i18next.t("WithSignedContract"), price: i18next.t("Free") },
+    { title: i18next.t("WithoutSignedContract"), price: i18next.t("WithoutSignedContractPrice") }
+];
 
 export const DISCOUNTS: Array<PriceText> = [
     { title: i18next.t("ClientsCommandDiscount"), price: i18next.t("ClientsCommandDiscountValue", { percent: "10" }) },

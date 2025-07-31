@@ -5,7 +5,7 @@ import CompanyDetails from "~/data/CompanyDetails";
 import LocationIcon from "~/assets/svgs/location-icon.svg";
 import PhoneCallIcon from "~/assets/svgs/phone-call.svg";
 import { Header } from "~/components/Header";
-import { Text } from "~/components/Table/Text";
+import { Text } from "~/components/Text";
 import B2BCalculator from "~/components/B2bCalculator";
 
 export const ContactView: React.FC = () => {
@@ -23,7 +23,7 @@ export const ContactView: React.FC = () => {
         <div className="flex-1 flex flex-col gap-6">
           <div className="flex items-start gap-3">
             {/* Phone Icon */}
-            <img src={PhoneCallIcon} alt="Phone" className="w-8 h-8 mt-1 text-gray-800" />
+            <img src={PhoneCallIcon} alt="Kontakt z biurem ksiegowym" className="w-8 h-8 mt-1 text-gray-800" />
             <div>
             <Header type="h2">{t("Contact")}</Header>
               <div className="text-gray-700">
@@ -43,7 +43,7 @@ export const ContactView: React.FC = () => {
         <div  className="flex-1 flex flex-col gap-6 r">
           <div className="flex items-start gap-3">
             {/* Location Icon from assets */}
-            <img src={LocationIcon} alt="Location" className="w-8 h-8 mt-1 text-gray-800" />
+            <img src={LocationIcon} alt="Spotkanie z biurem ksiegowym" className="w-8 h-8 mt-1 text-gray-800" />
             <div>
                 <Header type="h2">{t("Address")}</Header>
                 <Text bold>{CompanyDetails.title}</Text>

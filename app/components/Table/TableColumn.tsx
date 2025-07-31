@@ -1,8 +1,10 @@
 export const TableColumn: React.FC<{
   children: React.ReactNode;
-}> = ({ children }) => {
+  align?: "left" | "right";
+}> = ({ children, align = "left" }) => {
+  const alignmentClass = align === "right" ? "text-right" : "text-left";
   return (
-    <td className="px-2 py-2 whitespace-normal break-words max-w-[140px] sm:max-w-none">
+    <td className={`px-2 py-2 whitespace-normal break-words ${alignmentClass}`}>
       {children}
     </td>
   );

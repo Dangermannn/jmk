@@ -10,7 +10,7 @@ export default function  Accordion({ className, title, children }: { className?:
         onClick={() => setIsOpen(!isOpen)}
         className="w-full flex justify-between items-center bg-blue-100 text-blue-800 font-medium px-4 py-3 cursor-pointer transition-colors"
       >
-        <span className="text-lg">{title}</span>
+        <span className="text-lg text-center sm:text-left w-full sm:w-auto">{title}</span>
         <svg
           className={`w-5 h-5 text-blue-600 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
           fill="none"
